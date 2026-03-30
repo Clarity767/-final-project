@@ -90,28 +90,12 @@ def mark_read(id):
     conn.close()
     return redirect(url_for('library'))
 
-@app.route('/edit/<int:id>', methods=['GET', 'POST'])
-def edit(id):
+@app.route('/book/<int:id>')
+def book_detail(id):
     conn = get_db_connection()
     book = conn.execute('SELECT * FROM books WHERE id = ?', (id,)).fetchone()
-
-    if request.method == 'POST':
-        title = request.form.get('title')
-        author_name = request.form.get('author')
-        description = request.form.get('description')
-        year = request.form.get('year')
-        image_url = request.form.get('image_url')
-
-        conn.execute(
-            'UPDATE books SET title=?, author=?, description=?, year=?, image_url=? WHERE id=?',
-            (title, author_name, description, year, image_url, id)
-        )
-        conn.commit()
-        conn.close()
-        return redirect(url_for('library'))
-
     conn.close()
-    return render_template('edit.html', book=book)
+    return render_template('book_detail.html', book=book)
 
 if __name__ == '__main__':
     app.run(debug=True)

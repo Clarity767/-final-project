@@ -32,6 +32,7 @@
             <a href="{{ url_for('mark_read', id=book.id) }}">
                 {% if book.is_read %}✅{% else %}📖{% endif %}
             </a>
+            <a href="{{ url_for('book_detail', id=book.id) }}">Детальніше</a>
         </li>
     {% endfor %}
     </ul>
