@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+ 
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111111;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+ 
+
+.header {
+    background-color: #1c1c1c;
+    padding: 28px 40px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #2a2a2a;
+}
+ 
+.header a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+ 
+.header a:hover {
+    color: #ffffff;
+}
+ 
+
+ 
+main, .container, form {
+    background-color: #1c1c1c; 
+    padding: 28px;
+    max-width: 800px;
+    margin: 30px auto;
+    border: 1px solid #2a2a2a;
+}
+ 
+
+ 
+button, .planner-btn {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+    border: 1px solid #444444;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+}
+ 
+
+ 
+
+ 
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    background-color: #252525;
+    color: #f0f0f0;
+    outline: none;
+}
+ 
+ 
+
+ 
+ul {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+}
+ 
+li {
+    background-color: #222222;
+    margin-bottom: 14px;
+    padding: 16px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+ 
+li img {
+    border-radius: 8px;
+    object-fit: cover;
+    width: 120px;
+    height: 85px;
+}
+ 
+li div h3 {
+    margin: 0 0 5px 0;
+    color: #f0f0f0;
+}
+ 
+li div p {
+    margin: 3px 0;
+    color: #777777;
+    font-size: 14px;
+}
+ 
+li div a {
+    color: #cc4444;
+    text-decoration: none;
+}
+ 
+li div a:hover {
+    text-decoration: underline;
+}
+ 
+
+ 
+body.index main {
+    text-align: center;
+}
+ 
+body.index main h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+ 
+body.index main p {
+    font-size: 16px;
+    color: #888888;
+    margin-bottom: 24px;
+}
+ 
+
+ 
+body.author main {
+    text-align: center;
+}
+ 
+body.author main h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+ 
+body.author main p {
+    font-size: 16px;
+    color: #888888;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+ 
+body.author main h3 {
+    font-size: 16px;
+    color: #aaaaaa;
+    font-weight: 600;
+}
+
+
+a {
+    text-decoration: none;
+}

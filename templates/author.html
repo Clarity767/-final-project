@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body_class %}author{% endblock %}
+
+{% block content %}
+<h1>Інформація про автора</h1>
+
+<p>
+Мене звати Гліб, я навчаюсь на курсі "Пайтон для школярів".<br>
+Я роблю свій фінальний проект "Бібліотека" на Flask.<br>
+Місто: Дніпро
+</p>
+
+<img src="{{ url_for('static', filename='images/author.png') }}" width="200">
+
+<h3>Контакти: Telegram: @gahewuqte</h3>
+{% endblock %}

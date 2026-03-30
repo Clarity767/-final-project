@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block body_class %}library{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Бібліотека книг</h1>
+
+    <form method="POST">
+        <input type="text" name="title" placeholder="Назва книги" required>
+        <input type="text" name="author" placeholder="Автор" required>
+        <input type="text" name="description" placeholder="Опис">
+        <input type="number" name="year" placeholder="Рік видання">
+        <input type="text" name="image_url" placeholder="URL картинки">
+        <button type="submit">Додати книгу</button>
+    </form>
+
+    <ul>
+    {% for book in books %}
+        <li>
+            <h3>{{ book.title }}</h3>
+            <p>Автор: {{ book.author }}</p>
+            <p>{{ book.description }}</p>
+            <p>Рік: {{ book.year }}</p>
+            <p>Додано: {{ book.created_at }}</p>
+
+            {% if book.image_url %}
+            <img src="{{ book.image_url }}" width="120">
+            {% endif %}
+
+            <a href="{{ url_for('delete', id=book.id) }}">Видалити</a>
+            <a href="{{ url_for('mark_read', id=book.id) }}">
+                {% if book.is_read %}✅{% else %}📖{% endif %}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
